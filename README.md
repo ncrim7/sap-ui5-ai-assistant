@@ -225,10 +225,10 @@ Her biri için “Instructions” + “Tools” tanımlanmalı.
 
 # 📸 Ekran Görüntüleri
 
-<img src="https://github.com/ncrim7/sap-ui5-ai-assistant/blob/main/assets/gif.gif" width="400px" height="auto">
-<img src="https://github.com/ncrim7/sap-ui5-ai-assistant/blob/main/assets/img3.png" width="400px" height="auto">
-<img src="https://github.com/ncrim7/sap-ui5-ai-assistant/blob/main/assets/img4.png" width="400px" height="auto">
-<img src="https://github.com/ncrim7/sap-ui5-ai-assistant/blob/main/assets/img6.png" width="400px" height="auto">
+<img src="https://github.com/ncrim7/sap-ui5-ai-assistant/blob/main/assets/gif.gif" width="400px" height="auto">.
+<img src="https://github.com/ncrim7/sap-ui5-ai-assistant/blob/main/assets/img3.png" width="400px" height="auto">.
+<img src="https://github.com/ncrim7/sap-ui5-ai-assistant/blob/main/assets/img4.png" width="400px" height="auto">.
+<img src="https://github.com/ncrim7/sap-ui5-ai-assistant/blob/main/assets/img6.png" width="400px" height="auto">.
 ---
 
 # 📄 Lisans

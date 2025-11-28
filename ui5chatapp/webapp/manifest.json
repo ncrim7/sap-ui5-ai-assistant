@@ -1,0 +1,99 @@
+{
+  "_version": "1.48.0",
+  "sap.app": {
+    "id": "com.mycompany.ui5chatapp",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "sourceTemplate": {
+      "id": "ui5template.basic",
+      "version": "1.0.0"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "resources": {
+      "css": [
+        {
+            "uri": "css/style.css?v=2"
+        }
+    ]
+    },
+    "rootView": {
+      "viewName": "com.mycompany.ui5chatapp.ext.main.Main",
+      "type": "XML",
+      "async": true,
+      "id": "Main"
+    },
+    "dependencies": {
+      "minUI5Version": "1.108.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.ui.layout": {},
+        "sap.viz": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.mycompany.ui5chatapp.i18n.i18n"
+        }
+      },
+      "chatModel": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/chatData.json",
+        "preload": true
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "com.mycompany.ui5chatapp.ext.main",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "transition": "slide"
+      },
+      "routes": [
+        {
+          "name": "RouteMain",
+          "pattern": "",
+          "target": "TargetMain"
+        }
+      ],
+      "targets": {
+        "TargetMain": {
+          "viewId": "Main",
+          "viewName": "Main"
+        }
+      }
+    }
+  }
+}

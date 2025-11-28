@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "3.1"
+metadata:
+  name: com.mycompany.ui5chatapp
+type: application
+framework:
+  name: SAPUI5
+  version: 1.142.1
+  libraries:
+    - name: sap.m
+    - name: sap.ui.core
+    - name: sap.fe.templates
+    - name: sap.fe.core
+    - name: sap.ushell
+    - name: themelib_sap_horizon
+server:
+  customMiddleware:
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        ignoreCertErrors: false
+        backend:
+          - path: /api
+            url: https://port4000-workspaces-ws-3s963.us10.trial.applicationstudio.cloud.sap
+            destination: ""
+    - name: fiori-tools-appreload
+      afterMiddleware: compression
+      configuration:
+        port: 35729
+        path: webapp
+        delay: 300
+    - name: ui5-tooling-transpile-middleware
+      afterMiddleware: compression
+      configuration:
+        debug: true
+        transformModulesToUI5:
+          overridesToOverride: true
+        excludePatterns:
+          - /Component-preload.js
+    - name: fiori-tools-preview
+      afterMiddleware: fiori-tools-appreload
+      configuration:
+        flp:
+          theme: sap_horizon
+builder:
+  customTasks:
+    - name: ui5-tooling-transpile-task
+      afterTask: replaceVersion
+      configuration:
+        debug: true
+        transformModulesToUI5:
+          overridesToOverride: true

@@ -1,0 +1,29 @@
+{
+  "generationParameters": {
+    "generationDate": "Wed Nov 26 2025 08:39:37 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "OData URL",
+    "metadataFilename": "",
+    "serviceUrl": "https://port4000-workspaces-ws-3s963.us10.trial.applicationstudio.cloud.sap",
+    "appName": "ui5chatapp",
+    "appTitle": "Team Chat",
+    "appDescription": "26.11.2025-An SAP Fiori application.",
+    "appNamespace": "com.mycompany",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.142.1",
+    "enableCodeAssist": false,
+    "enableEslint": false,
+    "enableTypeScript": true,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.18.6",
+    "template": "Custom Page V4",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "Products"
+      }
+    ],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}
